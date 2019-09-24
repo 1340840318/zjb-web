@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: blue;"></div>
+    <script>
+        var div = document.getElementsByTagName('div');
+        console.log(div[0].style.backgroundColor);
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.body.innerHTML = '<ul><li>111</li><li>222</li><li>333</li></ul>';
+        document.getElementsByTagName('li')[1].setAttribute('class','blue');
+    </script>
+</body>
+</html>

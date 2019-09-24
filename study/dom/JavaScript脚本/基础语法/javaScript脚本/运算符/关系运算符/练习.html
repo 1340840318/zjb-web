@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <button id=a3>按钮</button>
+    <script>
+        var nian = Number(parseInt(prompt('您多少岁')));
+        var a3 = document.getElementById('a3');
+        a3.onclick = function(){
+            if (nian <= 6) {
+                alert('免单');
+            } else if(nian >=80){
+                alert('打五折');
+            }else{
+                alert('全单');
+            }
+        }
+    </script>
+</body>
+</html>

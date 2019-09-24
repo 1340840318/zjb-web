@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        var a = Number(prompt('其输入您的年龄'));
+        if(isNaN(a)){
+            alert('请输入数字');
+        }else if(a<0){
+            alert('未出生');
+        }else if(a>=0 && a<3){
+            alert('婴儿');
+        }else if(a>=3 && a<12){
+            alert('少年');
+        }else if(a>=12 && a<18){
+            alert('青少年');
+        }else if(a>=18 && a<25){
+            alert('青年');
+        }else if(a>=25 && a<35){
+            alert('中年');
+        }else if(a>=35 && a<60){
+            alert('中老年');
+        }else if(a>=60 && a<100){
+            alert('老年');
+        }else{
+            alert('以死亡');
+        }
+    </script>
+</body>
+</html>

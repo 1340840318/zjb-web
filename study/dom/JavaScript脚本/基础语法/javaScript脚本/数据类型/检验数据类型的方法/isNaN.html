@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <input type="text" id="int1">
+    <button id="btn">计算</button>
+    <script>
+        var int1 = document.getElementById('int1');
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            var num = Number(int1.value);
+            console.log(isNaN(num));
+            if(isNaN(num)){
+                alert('你干嘛呢?不是计算吗?输入文字干嘛?');
+            }
+            alert(num+10);
+        }
+    </script>
+</body>
+</html>

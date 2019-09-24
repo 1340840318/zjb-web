@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        var a = Number(prompt('请输入第一个数字'));
+        var b = Number(prompt('请输入第二个数字'));
+        if(isNaN(a&&b)){
+            alert('请输入数字');
+        }else{
+            var c = prompt('请输入运算符(+-*/)');
+            alert(c === '+' ? a + b : c === '-' ? a - b : c === '*' ? a * b : c === '/' ? a / b : '请输入运算符');
+        }
+    </script>
+</body>
+</html>

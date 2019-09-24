@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <input type="date" id="day">
+    <script>
+        var day = document.getElementById('day');
+        day.oninput = function(){
+            var dv = day.value;
+            var dc = (dv == '2019-03-08');
+            if(dc==true){
+                alert('今天优惠');
+                var n = confirm('性别为女');
+                n==true?alert('打五折'):alert('不打折');
+            }else{
+                alert('今天不优惠');
+            }
+        }
+    </script>
+</body>
+</html>

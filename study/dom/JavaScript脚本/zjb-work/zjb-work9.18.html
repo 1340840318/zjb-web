@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="show"></div>
+    <input type="text" id="in1">
+    <input type="text" id="in2">
+    <button id="btn">按钮</button>
+    <script>
+        var in1 = document.getElementById('in1');
+        var in2 = document.getElementById('in2');
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            if(in1.value,in2.value==""|| isNaN(in1.value,in2.value)){
+                alert('请您输入数字');
+            }else{
+                show.innerHTML = parseInt(in1.value) + parseInt(in2.value);
+            }
+        }
+        </script>
+</body>
+</html>
