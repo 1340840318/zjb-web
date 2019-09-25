@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box{
+            position: relative;
+        }
+        #box > div{
+            width: 100px;
+            height: 80px;
+            border: 1px solid black;
+            position: absolute;
+            background-image: url('1.png');
+            opacity: 0;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var box = document.getElementById('box');
+        for(var i=0;i<10;i++){
+            for(var j=0;j<10;j++){
+                var div = document.createElement('div');
+                box.appendChild(div);
+                div.style.top = i*80 + 'px';
+                div.style.left = j*100 + 'px';
+                div.style.backgroundPositionX = j*-100 + 'px';
+                div.style.backgroundPositionY = i*-80 + 'px';
+                div.onmousemove = function(){
+                    this.style.opacity = 1;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
