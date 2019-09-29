@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            float: left;
+        }
+        div{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="in1">
+    <div id="d1">请输入用户名</div>
+    <br>
+    <input type="password" id="in2">
+    <div id="d2">请输入密码</div>
+    <br>
+    <input type="submit" value="注册" id="in3">
+    <script>
+        var in1 = document.getElementById('in1');
+        var in2 = document.getElementById('in2');
+        var in3 = document.getElementById('in3');
+        var d1 = document.getElementById('d1');
+        var d2 = document.getElementById('d2');
+        in1.onblur = function(){
+            var arr = ['tom','jack','lili'];
+            var a = in1.value;
+            var b = arr.indexOf(a);
+            if(a==""){
+                alert('用户名不能为空');
+            }else if(b != -1){
+                d1.innerHTML = '用户名重复';
+            }else{
+                d1.innerHTML = '';
+                d1.style.display = 'none';
+            }
+        }
+        in2.onblur = function(){
+            var m = in2.value;
+            if(m == ""){
+                alert('密码不能为空');
+            }else{
+                d2.style.display = 'none';
+            }
+        }
+        in3.onclick = function(){
+            if(in1.value==''&&in2.value==''){
+                alert('用户名不能为空和密码不能为空');
+            }else if(in1.value==''){
+                alert('用户名不能为空');
+            }else if(in2.value==''){
+                alert('密码不能为空');
+            }else if(d1.innerHTML == '用户名重复'){
+                alert('请修改用户名');
+            }else{
+                alert('注册成功');
+            }
+        }
+    </script>
+</body>
+</html>
