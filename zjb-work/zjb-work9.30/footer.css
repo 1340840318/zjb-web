@@ -1,0 +1,142 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.foot{
+	width: 100%;
+	height:544px;
+	background-color: #333;
+	background-image: url(../zjb-work9.30/img/download.png);
+	background-position: center;
+}
+.foot-1{
+	width: 100%;
+	height:100%;
+	background: rgba(0, 0, 0, 0.75);
+}
+.free{
+	width: 1170px;
+	height: 500px;
+	margin: 0 auto;
+}
+.int{
+	width: 1170px;
+	height: 172px;
+	padding-top: 50px;
+	border-bottom: 1px solid #FFF;
+}
+.car{
+	width:390px;
+	height: 137px;
+	display: inline-block;
+}
+.car img{
+	float: left;
+}
+.car-text{
+	float:left;
+	color:#fff;
+}
+.car-text h4{
+	font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0 0 10px;
+    padding-left: 25px;
+    font-weight: 200;
+}
+.car-text h1{
+	font-size: 32px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    padding-left: 25px;
+}
+/*下方文字*/
+.footer{
+	width: 1170px;
+	height: 256px;
+	margin-top: 20px;
+}
+.footer-center{
+	width: 1170px;
+	height: 200px;
+	margin-top: 20px;
+}
+.about{
+	width: 292.5px;
+	height: 191.7px;
+	float: left;
+	color: white;
+	font-size: 14px;
+}
+.about ul{
+	list-style: none;
+}
+.about ul p{
+	line-height: 28px;
+}
+.about ul dl{
+	font-size: 15.2px;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0 0 25px;
+}
+.about ul li{
+	margin-top: 12px;
+	cursor: pointer;
+}
+.about ul li:hover{
+	color: #fd405e;
+}
+.we{
+	padding-left: 15px;
+}
+.success li input{
+	border: 1px solid white;
+	color: white;
+	width: 247px;
+	height: 36px;
+	background: rgba(0, 0, 0, 0.75);
+	padding-left: 15px;
+}
+.success li button{
+	border: 1px solid white;
+	color: white;
+	width: 262px;
+	height: 36px;
+	background: rgba(0, 0, 0, 0.75);
+	cursor: pointer;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 20px;
+}
+.success li button:hover{
+    background: #fd405e;
+    border-color: #fd405e;
+    transition: all 300ms ease-in-out 0s;
+}
+.last{
+	width: 100%;
+	height: 50px;
+	background: #000;
+    line-height: 50px;
+    color: #FFF;
+    font-size: 12px;
+    font-family: 'PT Sans', sans-serif;
+}
+.last-center{
+	width: 1170px;
+	height: 50px;
+	margin: 0 auto;
+}
+.last-center p{
+	float: left;
+}
+.last-center a{
+	float: right;
+	text-decoration: none;
+	color: white;
+	padding-left: 10px;
+}
+.last-center span{
+	float: right;
+	padding-left: 10px;
+}
