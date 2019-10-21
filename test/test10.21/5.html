@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = prompt('请输入验证码:abc');
+        if(a.toLowerCase() == 'abc' || a.toUpperCase() == 'ABC'){
+            alert('输入正确');
+        }else{
+            alert('输入错误');
+        }
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+        div.setAttribute("id",'h5');
+        div.innerHTML = a;
+    </script>
+</body>
+</html>
