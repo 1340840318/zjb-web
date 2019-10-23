@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; 
+            padding: 0;
+        }
+        body{
+            background-image: url('9.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    #box{
+        overflow: hidden;
+        position: relative;
+        width: 600px;
+        height: 600px;
+        margin: 0 auto;
+    }
+    #box > div{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid #555555;
+        font-size: 40px;
+        text-align: center;
+        line-height: 50px;
+        background-image: url();
+        background-size: cover;
+    }
+    .active{
+        background-color: #555555;
+    }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <script>
+        var arr = [
+            [1,2,3,0,4,5],
+            [0,2,3,1,5,4],
+            [1,0,4,2,3,5],
+            [4,1,0,5,2,3],
+            [2,3,5,1,0,4],
+            [5,4,2,3,1,0],
+        ];
+        var sjarr = [];
+        var box = document.getElementById('box');
+        for(var i = 0;i < 6;i++){
+            for(var j = 0;j < 6;j++){
+                var divs = document.createElement('div');
+                box.appendChild(divs);
+                divs.style.top = (i*55) + 'px';
+                divs.style.left = (j*55) + 'px';
+                // divs.innerHTML = arr[i][j];
+                divs.style.backgroundImage = 'url('+arr[i][j]+'.png)';
+                divs.onclick = function(){
+                    if(sjarr.length<2){
+                        if(this.className == 'active'){
+                            alert('已选过');
+                        }else{
+                            sjarr.push((this.style.backgroundImage).slice(5,6));
+                            this.className = 'active';
+                        }
+                    }else{
+                        sjarr = [];
+                        var ss = box.querySelectorAll('#box>div');
+                        for(var e = 0;e<ss.length;e++){
+                            ss[e].className = '';
+                        }
+                        sjarr.push((this.style.backgroundImage).slice(5,6));
+                        this.className = 'active';
+                    }
+                    if(sjarr.length == 2){
+                        if(sjarr[0]-sjarr[1] == 0){
+                            var ww = box.querySelectorAll('.active');
+                            for(var f = 0;f<ww.length;f++){
+                                ww[f].style.backgroundImage = '';
+                                ww[f].className = '';
+                                ww[f].onclick = null;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }   
+    </script>
+</body>
+</html>
