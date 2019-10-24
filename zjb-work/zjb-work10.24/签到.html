@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    <input type="text" id="in1">
+    <button id="btn1">签到</button>
+    <button id="btn2">未签到</button>
+    <div id="mydiv"></div>
+    <script>
+        var in1 = document.getElementById('in1');
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var mydiv = document.getElementById('mydiv');
+        var div = document.getElementById('div');
+        var aa = ['魏巍','李新龙','王朝辉','王飞宇','张金邦','程洪波','王帅杰','朱扬帆','郑直','魏寒霜'];
+        div.innerHTML = '签到人员：' + aa;
+        var bb = [];
+        btn1.onclick = function(){
+            bb.push(in1.value);
+            btn2.onclick = function(){
+                var cc = aa.join(',');
+                var reg = new RegExp(bb.join('|'),'g');
+                mydiv.innerHTML = cc.replace(reg,'');
+            }
+        }
+       
+    </script>
+</body>
+</html>
