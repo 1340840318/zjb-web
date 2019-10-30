@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            background-color: #e169c3;
+            position: absolute;
+            box-sizing: border-box;
+            z-index: 10;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        span {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            list-style: none;
+            box-sizing: border-box;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            transition: 1s;
+            z-index: 1;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .s1 {
+            background-color: #e169c3;
+        }
+
+        .s2 {
+            background-color: #b569e1;
+        }
+
+        .s3 {
+            background-color: #7169e1;
+        }
+
+        .s4 {
+            background-color: #69b8e1;
+        }
+
+        .s5 {
+            background-color: #69e1d4;
+        }
+
+        .s6 {
+            background-color: #6ce169;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <span class="s1"></span>
+    <span class="s2"></span>
+    <span class="s3"></span>
+    <span class="s4"></span>
+    <span class="s5"></span>
+    <span class="s6"></span>
+    <script>
+        var a = 0;
+        var aa = 0;
+        $("#mydiv").click(function () {
+            if (aa == 0) {
+                $("span").each(function () {
+                    $(this).css({ "left": a * 70 + 120 }).click(function () {
+                        $("#mydiv").attr("class", $(this).attr("class"));
+                        $("body").attr("class", $(this).attr("class"));
+                    });
+                    a++
+                })
+                aa = 1;
+                a = 0;
+            } else {
+                $("span").css({ "left": "27px" });
+                aa = 0;
+            }
+        })
+    </script>
+</body>
+</html>
