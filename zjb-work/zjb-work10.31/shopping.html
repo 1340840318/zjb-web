@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        p{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td><input type="checkbox" name="" id="hw"></td>
+            <td><span>华为mate20</span></td>
+            <td><input type="text" id="sl" value="1"></td>
+            <td><span>单价:<p id="dj">4999</p></span></td>
+            <td><span>合计:<p id="zz"></p></span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="xm"></td>
+            <td><span>小米8</span></td>
+            <td><input type="text" value="1" id="sls"></td>
+            <td><span>单价:<p id="djs">3999</p></span></td>
+            <td><span>合计:<p id="zzs"></p></span></td>
+        </tr>
+        <tr>
+            <td><span>共<p id="num">0</p>件商品</span></td>
+            <td><span>合计：<p id="zj">0</p></span></td>
+        </tr>
+    </table>
+    <script>
+        $('#sl,#hw').change(function(){
+            if($('#hw').is(':checked') == true){
+                $('#zz').html($('#sl').val()*$('#dj').html());
+            }else{
+                $('#zz').html('')
+            }
+            
+        })
+        
+        $('#sls,#xm').change(function(){
+            if($('#xm').is(':checked') == true){
+                $('#zzs').html($('#sls').val()*$('#djs').html());
+            }else{
+                $('#zzs').html('')
+            }
+        })
+        $('#hw,#xm,#sl,#sls').change(function(){
+            if($('#hw').is(':checked') == true && $('#xm').is(':checked') == true){
+                $('#num').html(parseInt($('#sl').val())+parseInt($('#sls').val()))
+                $('#zj').html(parseInt($('#zz').html())+parseInt($('#zzs').html()))
+            }else if($('#hw').is(':checked') == true){
+                $('#num').html(parseInt($('#sl').val()))
+                $('#zj').html(parseInt($('#zz').html()))
+            }else if($('#xm').is(':checked') == true){
+                $('#num').html(parseInt($('#sls').val()))
+                $('#zj').html(parseInt($('#zzs').html()))
+            }else{
+                $('#num').html('0')
+                $('#zj').html('0')
+            }
+        })
+            // $('#zj').html($('#zz').html()+$('#zzs').html())
+    </script>
+</body>
+</html>
